@@ -11,6 +11,6 @@ pipeline {
   }
   tools {
     maven 'ALAN_MVN'
-    jdk 'ALAN_JAVA1.8.0'
+    jdk 'ALAN_JAVA'
   }
 }
