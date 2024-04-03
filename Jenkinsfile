@@ -1,9 +1,5 @@
 pipeline {
   agent any
-  tools { 
-      maven 'ALAN_MVN' 
-      jdk 'ALAN_JAVA1.8.0' 
-  }
   stages {
     stage('run') {
       steps {
@@ -11,5 +7,10 @@ pipeline {
         sh 'git bisect run mvn clean test'
       }
     }
+
+  }
+  tools {
+    maven 'ALAN_MVN'
+    jdk 'ALAN_JAVA1.8.0'
   }
 }
